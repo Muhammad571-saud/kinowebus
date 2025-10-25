@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Admin Panel</h1>
+        <button onclick="window.location.href='/'">Bosh sahifaga qaytish</button>
+    </header>
+
+    <main id="admin-content">
+        <div id="auth-section">
+            <h2>Parolni kiriting</h2>
+            <input type="password" id="admin-password" placeholder="Parol">
+            <button id="auth-btn">Kirish</button>
+        </div>
+
+        <div id="admin-panel" style="display: none;">
+            <h2>Admin Boshqaruvi</h2>
+            <button id="add-movie-btn">Kino Qo'shish</button>
+            <button id="remove-movie-btn">Kino O'chirish</button>
+
+            <div id="add-movie-form" style="display: none;">
+                <h3>Yangi Kino Qo'shish</h3>
+                <select id="movie-type">
+                    <option value="movie">Kino</option>
+                    <option value="cartoon">Multfilm</option>
+                </select>
+                <input type="text" id="movie-name" placeholder="Kino nomi">
+                <input type="text" id="movie-code" placeholder="Kino kodi (masalan: AVATAR2024)">
+                <input type="file" id="movie-image" accept="image/*">
+                <button id="submit-add-movie">Kino Qo'shish</button>
+            </div>
+
+            <div id="remove-movie-form" style="display: none;">
+                <h3>Kino O'chirish</h3>
+                <input type="text" id="remove-movie-code" placeholder="Kino kodi">
+                <button id="submit-remove-movie">Kino O'chirish</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kino Qidirish</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Kino Qidirish</h1>
+        <button onclick="window.location.href='/'">Bosh sahifaga qaytish</button>
+    </header>
+
+    <main>
+        <div class="search-container">
+            <h2>Kino kodini kiriting</h2>
+            <input type="text" id="movie-code-input" placeholder="Kino kodi" maxlength="20">
+            <button id="search-movie-btn">Qidirish</button>
+            <div id="search-result" class="search-result">
+                <!-- Search result will be shown here -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <a href="#" id="admin-link">Admin Panel</a>
+    </footer>
+
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+</html>
